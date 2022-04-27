@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>D:/idea_code/designPatterns/src/com/xuemi/principle/interfaceSegregationPrinciple/ImproveDome.java</OriginalElement>
+  <nodes>
+    <node x="297.875" y="11.5">com.xuemi.principle.interfaceSegregationPrinciple.interface2</node>
+    <node x="533.5" y="0.0">com.xuemi.principle.interfaceSegregationPrinciple.interface3</node>
+    <node x="62.25" y="0.0">com.xuemi.principle.interfaceSegregationPrinciple.interface4</node>
+    <node x="431.5" y="134.0">com.xuemi.principle.interfaceSegregationPrinciple.BB</node>
+    <node x="123.00000000000003" y="-227.0">com.xuemi.principle.interfaceSegregationPrinciple.CC</node>
+    <node x="181.0" y="129.0">com.xuemi.principle.interfaceSegregationPrinciple.DD</node>
+    <node x="414.0" y="-227.0">com.xuemi.principle.interfaceSegregationPrinciple.AA</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.xuemi.principle.interfaceSegregationPrinciple.DD" target="com.xuemi.principle.interfaceSegregationPrinciple.interface4" relationship="REALIZATION">
+      <point x="-67.0" y="-63.0" />
+      <point x="51.75" y="39.5" />
+    </edge>
+    <edge source="com.xuemi.principle.interfaceSegregationPrinciple.BB" target="com.xuemi.principle.interfaceSegregationPrinciple.interface3" relationship="REALIZATION">
+      <point x="67.0" y="-63.0" />
+      <point x="-35.0" y="39.5" />
+    </edge>
+    <edge source="com.xuemi.principle.interfaceSegregationPrinciple.CC" target="com.xuemi.principle.interfaceSegregationPrinciple.interface4" relationship="DEPENDENCY">
+      <point x="-83.25000000000003" y="63.0" />
+      <point x="0.0" y="-39.5" />
+    </edge>
+    <edge source="com.xuemi.principle.interfaceSegregationPrinciple.AA" target="com.xuemi.principle.interfaceSegregationPrinciple.interface3" relationship="DEPENDENCY">
+      <point x="89.5" y="63.0" />
+      <point x="-7.5" y="-39.5" />
+    </edge>
+    <edge source="com.xuemi.principle.interfaceSegregationPrinciple.CC" target="com.xuemi.principle.interfaceSegregationPrinciple.interface2" relationship="DEPENDENCY">
+      <point x="89.49999999999997" y="63.0" />
+      <point x="-62.875" y="-28.0" />
+    </edge>
+    <edge source="com.xuemi.principle.interfaceSegregationPrinciple.AA" target="com.xuemi.principle.interfaceSegregationPrinciple.interface2" relationship="DEPENDENCY">
+      <point x="-89.5" y="63.0" />
+      <point x="49.125" y="-28.0" />
+    </edge>
+    <edge source="com.xuemi.principle.interfaceSegregationPrinciple.BB" target="com.xuemi.principle.interfaceSegregationPrinciple.interface2" relationship="REALIZATION">
+      <point x="-67.0" y="-63.0" />
+      <point x="66.625" y="28.0" />
+    </edge>
+    <edge source="com.xuemi.principle.interfaceSegregationPrinciple.DD" target="com.xuemi.principle.interfaceSegregationPrinciple.interface2" relationship="REALIZATION">
+      <point x="5.0" y="-63.0" />
+      <point x="260.5" y="39.5" />
+      <point x="-74.5" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="367.0" y="9.5" />
+  <SelectedNodes>
+    <node>com.xuemi.principle.interfaceSegregationPrinciple.DD</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
