@@ -1,0 +1,20 @@
+类适配器：
+案例：
+    手机充电需要5V的电压，而家用电压为220V，需要在家用电和手机用电之间有一个缓冲区将220V降为5V供手机充电
+
+手机类Phone：
+    //充电方法，接受一个电压为5V的电
+    charging(IVoltage5 ivoltage5);
+
+充电器接口IVoltage5：
+    //抽象方法：接受家用电的电压，输出手机用电电压。
+    abstract void transform();
+
+家用电类Voltage220：
+    //电压输出方法：输出220V的电压
+    int outputVoltage();
+
+以上是家庭中有的设备，分别对应：手机、手机充电协议、家用插座
+需要在创建一个：手机变压器（适配器），该变压器符合手机充电协议，且集成了家用电的220V电压
+手机变压器类classAdapter extends Volatge220 implements IVoltage5:
+    int transform();//实现协议中的电压方法，将电压降低
