@@ -4,7 +4,10 @@
     <file url="file://$PROJECT_DIR$/src/com/xuemi/pattern/adapter/feeback" />
     <file url="file://$PROJECT_DIR$/src/com/xuemi/pattern/builder/feeback" />
     <file url="file://$PROJECT_DIR$/src/com/xuemi/pattern/decorator/feeback" />
+    <file url="file://$PROJECT_DIR$/src/com/xuemi/pattern/flyweight/feeback" />
     <file url="file://$PROJECT_DIR$/src/com/xuemi/pattern/prototype/improveDeepCopy/details" />
+    <file url="file://$PROJECT_DIR$/src/com/xuemi/pattern/proxy/dynamicProxy/details" />
+    <file url="file://$PROJECT_DIR$/src/com/xuemi/pattern/proxy/feeback" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

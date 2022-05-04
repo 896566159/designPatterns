@@ -1,0 +1,50 @@
+动态代理（JDK代理）：
+动态代理中：被代理类实现接口或者继承父类， 代理类不需要继承或者实现接口，通过jdk的反射机制创建代理对象
+1) 代理类,不需要实现接口，但是目标对象要实现接口，否则不能用动态代理
+2) 代理类对象的生成，是利用JDK的API，动态的在内存中构建代理对象
+3) 动态代理也叫做：JDK代理、接口代理
+
+JDK反射实现动态代理：
+1) 代理类所在包:java.lang.reflect.Proxy
+2) JDK实现代理只需要使用newProxyInstance方法,但是该方法需要接收三个参数,完
+    整的写法是:
+    static Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces, InvocationHandler h )
+    参数：
+        - ClassLoader loader：被代理类对象的类加载器，常用获取方式为： 被代理类对象.getClass().getClassLoader()
+        - Class<?>[] interfaces：被代理类实现的所有接口，常用获取方式为： 被代理类对象.getClass().getInterfaces()
+        - InvocationHandler h：事情处理，执行被代理类对象的方法时，会触发事情处理器方法，会把当前执行的被代理对象方法作为参数传入
+                               通常是通过 创建匿名对象 来为改参数赋值，并在 匿名对象 中重写 invoke()方法：
+                               //创建 匿名对象
+                               new InvocationHandler() {
+
+                                   //重写 invoke()方法
+                                   @Override
+                                   public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+
+                                       //teach()方法是 代理类对象 在被代理类对象执行 前的增强操作
+                                       teach();
+
+                                       //调用被代理类 被增强的方法
+                                       //参数一：被代理类对象
+                                       //参数二：被代理类方法的参数
+                                       //返回值：是被调用的方法的返回值
+                                       Object invoke = method.invoke(student, args);
+
+                                       //congratulate()方法是 代理类对象 在被代理类对象执行 后的增强操作
+                                       congratulate();
+
+                                       //返回被代理类方法 执行后返回的结果
+                                       return invoke;
+                                   }
+                               }
+
+应用实例：
+    1）三个角色：接口/抽象类、代理类、被代理类
+    - 考研（接口，声明考试exam()这个抽象方法）：GraduateEntranceExam
+    - 考生（被代理类，实现考研接口）：Student
+    - 考试机构（代理类，使用java.lang.reflect.Proxy中的newProxyInstance()方法创建代理类对象，
+       被创建出来的 代理类对象的类型 也属于被代理类接口类型，即创建出来的代理类对象也是GraduateEntranceExam类型）：ExamOrganizationProxy
+    2）代理增强被代理的功能：
+    - 考研机构 通过中有 考生对象， 考研机构类为 考生的exam()方法做增强（比如考研机够会教学生，考完会为学生庆祝，增强的同时也会调用学生的考试方法，
+      因为考研机够也需要考生自己学习、参考才能够帮助学生考上）
+    3）特别提醒：代理对象与被代理对象 要实现 相同的接口，然后通过 调用相同的方法来调用被代理对象的方法。
