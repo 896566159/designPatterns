@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/src/com/xuemi/pattern/prototype/improveDeepCopy/details" />
     <file url="file://$PROJECT_DIR$/src/com/xuemi/pattern/proxy/dynamicProxy/details" />
     <file url="file://$PROJECT_DIR$/src/com/xuemi/pattern/proxy/feeback" />
+    <file url="file://$PROJECT_DIR$/src/com/xuemi/pattern/visitor/feeback" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
